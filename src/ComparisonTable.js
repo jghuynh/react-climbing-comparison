@@ -7,7 +7,7 @@ function ComparisonTable({climbersList}) {
     return null;
   }
   // console.log(`Climbers List: ${climbersList}`)
-  // const [climber1, setclimber1] = useState([]);
+  //  const [climber1, setclimber1] = useState([]);
 
   // useEffect(() => {
   //   fetch("/climbers-partial.json")
