@@ -1,0 +1,44 @@
+[
+  {
+    "climber": "Janja GARNBRET",
+    "nation": "SLO",
+    "gender": "F",
+    "profileUrl": "https://www.ifsc-climbing.org/athlete/1147/janja-garnbret",
+    "age": "25",
+    "association": "Alpine Association of Slovenia",
+    "profileImage": "https://www.ifsc-climbing.org/_next/image?url=https%3A%2F%2Fifsc.results.info%2Fathletes%2F1147%2Fphoto&w=384&q=75",
+    "boulder": {
+      "rank": "1",
+      "points": "4805.0"
+    },
+    "lead": {
+      "rank": "1",
+      "points": "5610.0"
+    },
+    "boulder-lead": {
+      "rank": "1",
+      "points": "7000.0"
+    }
+  },
+  {
+    "climber": "Natalia GROSSMAN",
+    "nation": "USA",
+    "gender": "F",
+    "profileUrl": "https://www.ifsc-climbing.org/athlete/1803/natalia-grossman",
+    "age": "22",
+    "association": "USA Climbing",
+    "profileImage": "https://www.ifsc-climbing.org/_next/image?url=https%3A%2F%2Fifsc.results.info%2Fathletes%2F1803%2Fphoto&w=384&q=75",
+    "boulder": {
+      "rank": "2",
+      "points": "3895.0"
+    },
+    "boulder-lead": {
+      "rank": "4",
+      "points": "4345.0"
+    },
+    "lead": {
+      "rank": "31",
+      "points": "916.0"
+    }
+  }
+]
