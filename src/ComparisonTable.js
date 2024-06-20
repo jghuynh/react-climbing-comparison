@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
+import "./ComparisonTable.css";
 
 function ComparisonTable({ climbersList }) {
   // Ensure climber1 is an array before calling map
@@ -22,9 +23,23 @@ function ComparisonTable({ climbersList }) {
       </thead>
       <tbody>
         {climbersList.map((climberObject, i) => {
+          // Check if climberObject is undefined
+          if (!climberObject) {
+            return (
+              <tr key={i}>
+                <td colSpan="7">No data available</td>
+              </tr>
+            );
+          }
           return (
             <tr key={i}>
-              <td>{climberObject.climber}</td>
+              <td class="align-middle">
+                <a href={climberObject.profileUrl} target="_blank">{climberObject.climber}</a>
+                <img
+                  src={climberObject.profileImage}
+                  alt={climberObject.climber}
+                />
+              </td>
               <td>{climberObject.age}</td>
               <td>{climberObject.nation}</td>
               <td>
