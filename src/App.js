@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Card from "./Card";
+import Postcard from "./Postcard";
 import ComparisonTable from "./ComparisonTable";
 import Fuse from "fuse.js";
 
@@ -90,19 +90,24 @@ function App() {
       />
       <ComparisonTable climbersList={climbersList} />
 
-      {data.map((climberObject, index) => (
-        <Card
-          key={index}
-          name={climberObject.climber}
-          age={climberObject.age}
-          gender={climberObject.gender}
-          nation={climberObject.nation}
-          boulder={climberObject.boulder}
-          lead={climberObject.lead}
-          speed={climberObject.speed}
-          boulderLead={climberObject["boulder-lead"]}
-        />
-      ))}
+      <div
+        className="d-flex flex-row align-items-center
+                        justify-content-center vh-50 margin-auto flex-wrap"
+      >
+        {data.map((climberObject, index) => (
+          <Postcard
+            key={index}
+            name={climberObject.climber}
+            age={climberObject.age}
+            gender={climberObject.gender}
+            nation={climberObject.nation}
+            boulder={climberObject.boulder}
+            lead={climberObject.lead}
+            speed={climberObject.speed}
+            boulderLead={climberObject["boulder-lead"]}
+          />
+        ))}
+      </div>
     </div>
   );
 }
