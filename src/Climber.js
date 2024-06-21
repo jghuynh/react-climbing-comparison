@@ -1,5 +1,5 @@
 function Climber({
-  name,
+  // name,
   age,
   gender,
   nation,
@@ -10,18 +10,20 @@ function Climber({
 }) {
   return (
     <div>
-      <h3>Name: {name}</h3>
+      {/* <h3>Name: {name}</h3> */}
       <p>Age: {age}</p>
       <p>Gender: {gender}</p>
       <p>Nationality: {nation}</p>
       {boulder && (
         <>
+          <h6>Boulder</h6>
           <p>Rank: {boulder.rank}</p>
           <p>Points: {boulder.points}</p>
         </>
       )}
       {lead && (
         <>
+          <h6>Lead</h6>
           <p>Rank: {lead.rank}</p>
           <p>Points: {lead.points}</p>
         </>
@@ -29,12 +31,14 @@ function Climber({
 
       {boulderLead && (
         <>
+          <h6>Boulder-Lead</h6>
           <p>Rank: {boulderLead.rank}</p>
           <p>Points: {boulderLead.points}</p>
         </>
       )}
       {speed && (
         <>
+          <h6>Speed</h6>
           <p>Rank: {speed.rank}</p>
           <p>Points: {speed.points}</p>
         </>
