@@ -3,6 +3,12 @@ import Postcard from "./Postcard";
 import ComparisonTable from "./ComparisonTable";
 import Fuse from "fuse.js";
 
+/**
+ * An app that displays all registed ISFC climbers' statistics and lets
+ * users compare them in a comparison table
+ *
+ * @returns {ReactNode} The whole app
+ */
 function App() {
   const [data, setData] = useState([]);
   const [result1, setResult1] = useState({});
@@ -13,6 +19,9 @@ function App() {
   const [query1, updateQuery1] = useState("Ai Mori");
   const [query2, updateQuery2] = useState("Chaehyun SEO");
 
+  /**
+   * Reads the climbers information from a JSON file
+   */
   useEffect(() => {
     fetch("/climbers.json")
       .then((response) => {
@@ -32,6 +41,10 @@ function App() {
       );
   }, []);
 
+  /**
+   * Adds search functionality (Fuse) to search for climbers based on user input
+   *
+   */
   useEffect(() => {
     if (data.length > 0) {
       const options = {
@@ -51,20 +64,38 @@ function App() {
     }
   }, [query1, query2, data]);
 
+  /**
+   * Sets the state input variable for Climber 1 as the user's query
+   * @param {*} e the current, or the user input query
+   */
   function onSearch1(e) {
     setInput1(e.currentTarget.value);
   }
 
+  /**
+   * Sets the state input variable for Climber 2 as the user's query
+   * @param {} e the current event, or the user input query
+   */
   function onSearch2(e) {
     setInput2(e.currentTarget.value);
   }
 
+  /**
+   * When the user hits Enter, website will update the state query variable.
+   * The query variable will be inputted into the search function
+   * @param {} e the current event
+   */
   function handleKeyDown1(e) {
     if (e.key === "Enter") {
       updateQuery1(input1);
     }
   }
 
+  /**
+   * When the user hits Enter, website will update the state query variable.
+   * The query variable will be inputted into the search function
+   * @param {*} e the event
+   */
   function handleKeyDown2(e) {
     if (e.key === "Enter") {
       updateQuery2(input2);
@@ -106,8 +137,8 @@ function App() {
             lead={climberObject.lead}
             speed={climberObject.speed}
             boulderLead={climberObject["boulder-lead"]}
-            profileUrl = {climberObject.profileUrl}
-            profileImage = {climberObject.profileImage}
+            profileUrl={climberObject.profileUrl}
+            profileImage={climberObject.profileImage}
           />
         ))}
       </div>
