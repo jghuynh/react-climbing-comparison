@@ -73,6 +73,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1 class="center">Comparing IFSC Climbers</h1>
       <h3>Climber 1</h3>
       <input
         type="text"
@@ -105,6 +106,8 @@ function App() {
             lead={climberObject.lead}
             speed={climberObject.speed}
             boulderLead={climberObject["boulder-lead"]}
+            profileUrl = {climberObject.profileUrl}
+            profileImage = {climberObject.profileImage}
           />
         ))}
       </div>

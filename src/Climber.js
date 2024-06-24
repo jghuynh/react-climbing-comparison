@@ -13,6 +13,7 @@ function Climber({
       {/* <h3>Name: {name}</h3> */}
       <p>Age: {age}</p>
       <p>Gender: {gender}</p>
+      {/* https://github.com/danalloway/react-country-flag */}
       <p>Nationality: {nation}</p>
       {boulder && (
         <>
