@@ -1,3 +1,21 @@
+# Comparing Climbers
+
+This project uses React Bootstrap. More information down below.
+
+This project is a React website that
+1. Displays basic statistics of all the registered IFSC climbers. Note that this website unfortunately does not yet include paraclimbers.
+2. Allows users to search for and compare climbers in a comparison table
+
+## Information Source
+
+I had webscraped the climbers data from the [International Federation of Sport Climbing](https://www.ifsc-climbing.org/) website using Puppeteer in a different project and put it in a JSON file.
+
+## How To Load Website
+
+```
+npm start
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
